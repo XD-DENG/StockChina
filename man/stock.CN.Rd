@@ -1,7 +1,8 @@
 \name{stock.CN}
 \alias{stock.CN}
+
 \title{
-Grab Real-time Stock Price & Volume Information in China Market
+Grab Real-Time Stock Price & Volume Information in China Market
 }
 \description{
 With `stock.CN` function, users can obtain the real-time information about the price and volume of the stocks in China market, including Shanghai Stock Exchange (SSE) and Shenzhen Stock Exchange (SZSE).

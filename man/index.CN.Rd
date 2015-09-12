@@ -2,7 +2,7 @@
 \alias{index.CN}
 
 \title{
-Grab Real-time Stock Index in China Market
+Grab Real-Time Stock Index Information in China Market
 }
 \description{
 With `index.CN` function, users can obtain the real-time information about the stock index in China market, including Shanghai Stock Exchange (SSE) and Shenzhen Stock Exchange (SZSE).
