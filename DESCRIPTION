@@ -1,0 +1,10 @@
+Package: StockChina
+Type: Package
+Title: Real-time Stock Price & Volume in China Market
+Version: 0.1
+Date: 2015-09-12
+Author: Xiaodong Deng
+Maintainer: Xiaodong Deng <xd_deng@hotmail.com>
+Description: With this package, users can obtain the real-time price and volume information of stocks in China market, as well as the information of the stock index. This package adopted the API from Sina Finance (http://finance.sina.com.cn/).
+License: GPL-2
+LazyData: TRUE
