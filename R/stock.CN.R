@@ -1,29 +1,29 @@
-stock.CN <- function(stock_code){
+stock.CN <- function(stock.code){
 
 
 # add module to check if the code is valid --------------------------------
 
-  if(nchar(stock_code) != 6){
+  if(nchar(stock.code) != 6){
     stop("The stock code entered is invalid. The code should be like \"601898\" or \"000034\"")
   }
-  if(is.na(as.integer(stock_code)) == TRUE){
+  if(is.na(as.integer(stock.code)) == TRUE){
     stop("The stock code entered is invalid. The code should be like \"601898\" or \"000034\"")
   }
-  if((substr(stock_code, 1, 1) %in% c("0", "6")) == FALSE){
+  if((substr(stock.code, 1, 1) %in% c("0", "6")) == FALSE){
     stop("The stock code entered is invalid. The code should be like \"601898\" or \"000034\"")
   }
 
 
 # check the exchange altermatically, Shanghai or Shenzhen -----------------
 
-  exchange <- switch (substr(stock_code, 1, 1),
+  exchange <- switch (substr(stock.code, 1, 1),
     "6" = "sh",
     "0" = "sz"
   )
 
   query <- paste("http://hq.sinajs.cn/list=",
                  exchange,
-                 stock_code,
+                 stock.code,
                  sep="")
 
   raw_content <- scan(query,
@@ -37,13 +37,13 @@ stock.CN <- function(stock_code){
 
   names(result) <- c("code", "open", "prev.close", "current", "high", "low",
                      "volume", "amount",
-                     "bid.volumn.1", "bid.price.1","bid.volumn.2", "bid.price.2",
-                     "bid.volumn.3", "bid.price.3","bid.volumn.4", "bid.price.4","bid.volumn.5", "bid.price.5",
-                     "ask.volumn.1", "ask.price.1","ask.volumn.2", "ask.price.2",
-                     "ask.volumn.3", "ask.price.3","ask.volumn.4", "ask.price.4","ask.volumn.5", "ask.price.5",
+                     "bid.volume.1", "bid.price.1","bid.volume.2", "bid.price.2",
+                     "bid.volume.3", "bid.price.3","bid.volume.4", "bid.price.4","bid.volume.5", "bid.price.5",
+                     "ask.volume.1", "ask.price.1","ask.volume.2", "ask.price.2",
+                     "ask.volume.3", "ask.price.3","ask.volume.4", "ask.price.4","ask.volume.5", "ask.price.5",
                      "date", "time")
 
-  result$code <- stock_code
+  result$code <- stock.code
 
   return(result)
 }

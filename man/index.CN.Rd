@@ -12,12 +12,12 @@ index.CN(exchange)
 }
 
 \details{
-To be complete
+There are two stock exchanges in China, Shanghai Stock Exchange (SSE) and Shenzhen Stock Exchange (SZSE). The trading hours are 9:30 to 11:30, and 13:00 to 15:00 (Beijing time, i.e. UTC+08:00), Monday to Friday, excluding public holiday in China). 
 }
 
 \arguments{
   \item{exchange}{
-The stock exchange. Available options include "sh" and "sz".
+The stock exchange. Available options include "sh" and "sz" for Shanghai Stock Exchange and Shenzhen Stock Exchange, respectively.
 }
 }
 
@@ -29,9 +29,7 @@ The stock exchange. Available options include "sh" and "sz".
   \item{volume.hand }{The volume tranded within the day (Please note that the unit here is "hand", that is 100 stocks. This is a commonly used unit in China Market)}
   \item{amount.10k }{The amount within the day (Please note that here the unit is 10k Chinese Yuan. That is, if the amount here is 1, then the actual amount is 10,000 Chinese Yuan) }
 }
-\references{
-HTTP://www.21andy.com/new/20090530/1313.html
-}
+
 \author{
 Xiaodong Deng <xd_deng@hotmail.com>
 }
@@ -40,6 +38,8 @@ Xiaodong Deng <xd_deng@hotmail.com>
 1. Please note that the unit used for volume traded in this function is "hand", that is 100 stocks. This is a commonly used unit in China Market;
 
 2. Please note that the unit used for amount traded in this function is 10k Chinese Yuan. That is, if the amount here is 1, then the actual amount is 10,000 Chinese Yuan.
+
+3. The dates and time stamps produced from this function are in Beijing time, i.e. in timezone UTC+08:00.
 }
 
 \examples{
