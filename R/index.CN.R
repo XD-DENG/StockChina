@@ -37,7 +37,7 @@ index.CN <- function(exchange){
       result_sz <-as.list(content_sz)
 
       names(result_sz) <- c("index", "index.value", "change", "change.percentage",
-                            "volume", "amount.10k")
+                            "volume.hand", "amount.10k")
 
       return(result_sz)
     }

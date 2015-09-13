@@ -11,6 +11,10 @@ With `stock.CN` function, users can obtain the real-time information about the p
 stock.CN(stock_code)
 }
 
+\details{
+To be complete
+}
+
 \arguments{
   \item{stock_code}{
   The code of the stock (in character string).
@@ -27,7 +31,7 @@ stock.CN(stock_code)
   \item{high }{The highest price within the day}
   \item{low }{The lowest price within the day}
   \item{volume }{The volume traded within the day}
-  \item{amount }{The amount traded within the day}
+  \item{amount }{The amount traded within the day (The unit is Chinese Yuan)}
   \item{bid.volumn.1 }{The volumn of bidding}
   \item{bid.price.1 }{The latest price of bidding}
   \item{ask.volumn.1 }{The volumn of asking}
@@ -43,7 +47,6 @@ Xiaodong Deng <xd_deng@hotmail.com>
 \references{
 HTTP://www.21andy.com/new/20090530/1313.html
 }
-
 
 \examples{
 symbol <- "601898"
