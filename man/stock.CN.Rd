@@ -4,24 +4,26 @@
 \title{
 Grab Real-Time Stock Price & Volume Information in China Market
 }
+
 \description{
 With `stock.CN` function, users can obtain the real-time information about the price and volume of the stocks in China market, including Shanghai Stock Exchange (SSE) and Shenzhen Stock Exchange (SZSE).
 }
+
 \usage{
 stock.CN(stock.code)
 }
 
 \details{
-There are two stock exchanges in China, Shanghai Stock Exchange (SSE) and Shenzhen Stock Exchange (SZSE). The trading hours are 9:30 to 11:30, and 13:00 to 15:00 (Beijing time, i.e. UTC+08:00), Monday to Friday, excluding public holiday in China). 
+There are two stock exchanges in China, Shanghai Stock Exchange (SSE) and Shenzhen Stock Exchange (SZSE). The trading hours are 9:30 to 11:30, and 13:00 to 15:00 (Beijing time, i.e. UTC+08:00), Monday to Friday, excluding public holidays in China). 
 }
 
 \arguments{
   \item{stock.code}{
   The code of the stock (in character string).
+  
   The format should be like "600016" or "000034".
 }
 }
-
 
 \value{
   \item{code }{The code of the stock}
