@@ -1,0 +1,7 @@
++#!!!!!!!!!!TO DO
++  # even if the code format is valid, it may be invalid actually, like "600014".
++  # should check the result returned from API, to check if it's invalid and remind the user
+
+
+
+confirm that the units used are right

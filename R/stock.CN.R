@@ -1,9 +1,5 @@
 stock.CN <- function(stock.code){
 
-#!!!!!!!!!!TO DO
-  # even if the code format is valid, it may be invalid actually, like "600014".
-  # should check the result returned from API, to check if it's invalid and remind the user
-
 # add module to check if the code is valid --------------------------------
 
   if(nchar(stock.code) != 6){
