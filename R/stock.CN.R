@@ -8,6 +8,7 @@ stock.CN <- function(stock.code){
 
   query <- query.generator(stock.code)
 
+  # get content from API
   raw_content <- scan(query,
                       what = "raw", encoding = "UTF-8", quiet = TRUE)
 
