@@ -1,4 +1,4 @@
-stock.open <- function(stock.code){
+stock.current <- function(stock.code){
   
   # add module to check if the code is valid --------------------------------
   
@@ -14,8 +14,8 @@ stock.open <- function(stock.code){
   
   content <- strsplit(raw_content[2], split = ",")[[1]]
   
-  result <- as.numeric(content[2])
-  names(result) <- paste("Open Price of ", stock.code, " on ", content[31], sep="")
+  result <- as.numeric(content[4])
+  names(result) <- paste("Current Price of ", stock.code, " on ", content[31], sep="")
   
   return(result)
 }
