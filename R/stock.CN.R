@@ -2,28 +2,11 @@ stock.CN <- function(stock.code){
 
 # add module to check if the code is valid --------------------------------
 
-  if(nchar(stock.code) != 6){
-    stop("The stock code entered is invalid. The code should be like \"601898\" or \"000034\"")
-  }
-  if(is.na(as.integer(stock.code)) == TRUE){
-    stop("The stock code entered is invalid. The code should be like \"601898\" or \"000034\"")
-  }
-  if((substr(stock.code, 1, 1) %in% c("0", "6")) == FALSE){
-    stop("The stock code entered is invalid. The code should be like \"601898\" or \"000034\"")
-  }
+  if_valid <- stock.code.check(stock.code)
 
+# generate query ----------------------------------------------------------
 
-# check the exchange altermatically, Shanghai or Shenzhen -----------------
-
-  exchange <- switch (substr(stock.code, 1, 1),
-    "6" = "sh",
-    "0" = "sz"
-  )
-
-  query <- paste("http://hq.sinajs.cn/list=",
-                 exchange,
-                 stock.code,
-                 sep="")
+  query <- query.generator(stock.code)
 
   raw_content <- scan(query,
                       what = "raw", encoding = "UTF-8", quiet = TRUE)
