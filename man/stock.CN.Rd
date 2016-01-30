@@ -32,11 +32,11 @@ There are two stock exchanges in China, Shanghai Stock Exchange (SSE) and Shenzh
   \item{current }{The current price of the stock}
   \item{high }{The highest price within the day}
   \item{low }{The lowest price within the day}
-  \item{volume }{The volume traded within the day}
+  \item{volume }{The volume traded within the day (the unit here is 'share' instead of 'hand')}
   \item{amount }{The amount traded within the day (The unit is Chinese Yuan)}
-  \item{bid.volume.1 }{The volume of bidding}
+  \item{bid.volume.1 }{The volume of bidding (unit: share)}
   \item{bid.price.1 }{The latest price of bidding}
-  \item{ask.volume.1 }{The volume of asking}
+  \item{ask.volume.1 }{The volume of asking (unit: share)}
   \item{ask.price.1 }{The latest price of asking}
   \item{date }{The data on which the information obtained}
   \item{time }{The exact of the information obtained}

@@ -15,12 +15,13 @@ index.CN <- function(exchange){
 
     content_sh <- strsplit(raw_content_sh[2], split = ",")[[1]]
     content_sh[1] <- "Shanghai Index"
+    content_sh[5] <- as.numeric(content_sh[5])*100  # Jan 2016: to correct the unit. For "sz", no need to do this
     content_sh[6] <- strsplit(content_sh[6], split = "\"")[[1]][1]
 
     result_sh <-as.list(content_sh)
 
     names(result_sh) <- c("index", "index.value", "change", "change.percentage",
-                          "volume", "amount.10k")
+                          "volume.hand", "amount.10k")
     return(result_sh)
   }
 
